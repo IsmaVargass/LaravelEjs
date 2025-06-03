@@ -8,7 +8,7 @@ Route::get("/", function () {
 
 Route::get('/', function () {
     return view('ejercicio');
-})->name('home');
+})->name('ejercicio');
 
 Route::get('/about', function () {
     return view('about');
@@ -16,3 +16,7 @@ Route::get('/about', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/proyecto/{numero?}', function ($numero = 1) {
+    return view('proyecto', ['numero' => $numero]);
+})->name('proyecto');
