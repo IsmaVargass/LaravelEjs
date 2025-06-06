@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 255);
             $table->string('description', 255 )->nullable();
+            $table->date('deadline');
             $table->boolean('done')->default(false);
             // $table->integer('example');
             // $table->unsignedInteger('example');
