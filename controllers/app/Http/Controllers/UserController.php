@@ -13,6 +13,11 @@ class UserController extends Controller
         //TODO Consultas a la base de datos con Eloquent ORM
         // $age = 30;
         // $users = DB::select(DB::raw("SELECT * FROM users"))
+
+        // ? Otras formas: $users = DB::select("SELECT * FROM users WHERE age = 30"); 
+        // ? $users = DB::table('users')->select(DB::raw('*'))->where('age', '=', 32)->get();
+
+
         //* $users = User::all();
         //TODO $users = User::where()->orWhere()->orderBy()->limit()->get();
         //TODO $users = User::where('age', '>=', 22)->orderBy('age','asc')->get();
